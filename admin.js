@@ -35,6 +35,14 @@
           document.getElementById("input").style.display = "block";
         });
         
+        function valid(ans){
+          if(ans=="") return false;
+          if(ans.length>3) return false;
+          for(let i=0;i<ans.length;i++){
+            if(!(ans.charAt(i)>='0' && ans.charAt(i)<='9')) return false;
+          }
+          return true;
+        }
 
         document.getElementById("sub-btn").addEventListener("click",
           ()=>{
@@ -42,19 +50,33 @@
               waitingTime = document.getElementById("input").value;
               let rfloor = floor.value.toLowerCase();
               let i= document.getElementById("malls").value;
-              console.log(`/${rfloor}/${i}`);
-              if(waitingTime<=0 || waitingTime>1000)
+              console.log(`/${rfloor}/${i} ${waitingTime}`);
+              //if(valid(waitingTime))
               set(ref(db,`/${rfloor}/${i}`),waitingTime)
              console.log("Hello")
-             if(waitingTime<=0 || waitingTime>1000) showToast("Submitted");
-             else showToast("Done")
+             if(valid(waitingTime)) showToast("Submitted","success");
+             else showToast("Done","success");
 
         })
-        function showToast(msg) {
-          const toast = document.getElementById("toast");
-          toast.innerText = msg;
-          toast.classList.add("show");
+        // function showToast(msg) {
+        //   const toast = document.getElementById("toast");
+        //   toast.innerText = msg;
+        //   toast.classList.add("show");
           
+        //   setTimeout(() => {
+        //     toast.classList.remove("show");
+        //   }, 2500);
+        // }
+        function showToast(message, type = "success") {
+          const toast = document.getElementById("toast");
+        
+          // reset classes
+          toast.className = "";
+          toast.id = "toast";
+        
+          toast.innerText = message;
+          toast.classList.add("show", type);
+        
           setTimeout(() => {
             toast.classList.remove("show");
           }, 2500);
