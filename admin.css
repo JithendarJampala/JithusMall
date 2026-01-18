@@ -122,8 +122,12 @@ option :hover{
     font-size: 19px; color: #C6A15C;
     background-color: #1A2A3A; padding: 12px;
     font-weight: 500;
+    width: 100%;
 }
 
+placeholder{
+    font-size: 14px;
+}
 #toast {
     position: relative;
     bottom: 20px;
@@ -133,21 +137,26 @@ option :hover{
     padding: 12px 18px;
     border-radius: 8px;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(120px);
     transition: 0.3s ease;
     z-index: 1000;
+    width: 90%;
+    max-width: 500px;
   }
   
   #toast.show {
     opacity: 1;
     transform: translateY(0);
+
   }
   #toast.success {
     background-color: #16a34a; /* green */
+    width: 120px;
   }
   
   #toast.error {
     background-color: #dc2626; /* red */
+    width: 60%;
   }
   
   #toast.warning {

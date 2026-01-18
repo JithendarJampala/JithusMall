@@ -46,16 +46,16 @@
 
         document.getElementById("sub-btn").addEventListener("click",
           ()=>{
-              let waitingTime="12 Minutes";
-              waitingTime = document.getElementById("input").value;
+              let waitingTime = document.getElementById("input").value;
               let rfloor = floor.value.toLowerCase();
               let i= document.getElementById("malls").value;
               console.log(`/${rfloor}/${i} ${waitingTime}`);
               //if(valid(waitingTime))
               set(ref(db,`/${rfloor}/${i}`),waitingTime)
              console.log("Hello")
-             if(valid(waitingTime)) showToast("Submitted","success");
-             else showToast("Done","success");
+             if(waitingTime=="") showToast("Select Floor and Stall First","warning")
+             else if(valid(waitingTime)) showToast("Submitted","success");
+             else showToast("Enter in The Range 1-999","error");
 
         })
         // function showToast(msg) {
@@ -73,7 +73,6 @@
           // reset classes
           toast.className = "";
           toast.id = "toast";
-        
           toast.innerText = message;
           toast.classList.add("show", type);
         

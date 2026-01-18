@@ -9,11 +9,8 @@
 </head>
 <body>
     <header>
-        <!-- add this comment in index.html -->
-       <!-- <img src="images/icon.png"> -->
        <img src="images/Screenshot 2026-01-04 162439.png">
        <img src="images/gold-text-logo.png">
-       <!-- <img src="images/logo-text.png"> -->
     </header>
    <nav style="display: flex; flex-direction: row;
     justify-content: flex-start;flex-wrap: wrap;
@@ -27,17 +24,7 @@
         <a href="admin.html" id="admin-btn"
         style="background-color: #1A2A3A; color: #C6A15C;">ADMIN</a>
     </nav>
-    <!-- <nav style="display: flex; flex-direction: row;
-    justify-content: flex-start;flex-wrap: wrap;">
-        <a style="color: #C6A15C;" href="index.html" ">HOME</a>
-        <a style="color: #C6A15C;" href="ground.html">GROUND</a>
-        <a style="color: #C6A15C;" href="first.html">FIRST</a>
-        <a style="color: #C6A15C;" href="second.html">SECOND</a>
-        <a style="color: #C6A15C;" href="third.html">THIRD</a>
-        <a style="color: #C6A15C;" href="fourth.html">FOURTH</a>
-        <a style="color: #C6A15C;" href="admin.html" id="admin-btn"
-        >Admin</a>
-    </nav>   -->
+   
 
     <div class="card">
         <h1> Welcome To Admin Portal</h1>
@@ -48,8 +35,8 @@
             <option value="Third">FOOD COURT (Third Floor)</option>
             <option value="Fourth">THE GRAND CINEMA (Fourth Floor)</option>
         </select>
-        <select id="malls" class="malls"">
-            <option value=""  selcted hidden>Select Floor</option>
+        <select id="malls" class="malls"" style="display: none;">
+            <option value=""  selcted hidden >Select Stall</option>
         </select>
         <div style="display: flex; flex-direction: column; flex-wrap: wrap;
         gap: 10px; align-items:
@@ -62,12 +49,12 @@
         "Enter Number of People Waiting"
         class="peopleCount" id="peopleCount"> -->
         <input type="text" id="input" 
-        placeholder="Enter the value " 
+        placeholder="Enter Waiting Time in Minutes " 
         style="display: none;">
     </div>
     
     <button class="count-btn" id="sub-btn"">SUBMIT</button>
-    <div id="toast" style="margin: 3%; width: 56px; text-align: center;"></div>
+    <div id="toast" style="margin: 3%; text-align: center;"></div>
 
     <script type="module" src="admin.js">
        

@@ -3,10 +3,8 @@ import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10
 
 
 
-// IMPORTANT: this must match Firebase folder name EXACTLY
-let floor = document.body.dataset.floor;   // "First" or "first"
+let floor = document.body.dataset.floor;  
 
-// convert First → first
 const lfloor = floor.toLowerCase();
 
 const stallsref = ref(db, `/${lfloor}`);
@@ -25,14 +23,14 @@ onValue(stallsref, (snapshot) => {
         console.log(`${id}`);
         const h1id = `${floor}-stall-${id}`;  // e.g. first-stall-3
         const h1 = document.getElementById(h1id);
-        console.log(`${h1}`);
+        // console.log(`${h1}`);
         if(h1!=null)h1.style.display="inline-block"
-        console.log(`${h1id}`)
+        // console.log(`${h1id}`)
         if (h1) {
             if(floor=="Fourth") h1.textContent=`Available Seats : ${data[id]} (2:30 pm)`;
             else h1.textContent ="Waiting Time : "+ data[id] +" Minutes";
         }
 
-        console.log(`Updating: ${h1id} → ${data[id]}`);
+        // console.log(`Updating: ${h1id} → ${data[id]}`);
     });
 });
