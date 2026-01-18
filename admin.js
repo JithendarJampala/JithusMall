@@ -4,20 +4,21 @@
         
        
         const data = {
-          Ground: ["Bowling", "BumperCars", "VrCricket", "ARCADE"],
+          Ground: ["BOWLING", "BUMPER CARS", "VR CRICKET", "ARCADE"],
           First: ["f1", "f2", "f3", "f4"],
           Second: ["s1", "s2", "s3", "s4"],
           Third: ["BURGER kING","PIZZA HUT","PANI PURI","KFC","THICK SHAKE","STAR BUCKS","DOMINO'S PIZZA","SUBWAY","CAKE FACTORY"],
-          Fourth: ["AVATAR FIRE & ASH", "ANAGANAGA OKA RAJU", "KUNG FU PANDA", "SHAWSHANK REDEMPTION","KHALEJA","ALA VAIKUNTAPURAMLOO"]
+          Fourth: ["SHAWSHANK REDEMPTION","KHALEJA","OOHALU GUSAGUSALAADE","ALA VAIKUNTAPURAMLOO","TITANIC", "KUNG FU PANDA","KUNG FU PANDA 4"]
         };
         
         const floor = document.getElementById("floors");
         const mall = document.getElementById("malls");
         
         floor.addEventListener("change", () => {
-          mall.style.display = "block";
+         
         
-        
+        mall.innerHTML='<Option value="" selcted hidden>Select Mall</Option>'
+        mall.style.display = "block";
          let arr = data[floor.value];
          for(let i=0;i<arr.length;i++){
           const op = document.createElement("option");
@@ -50,7 +51,7 @@
               let rfloor = floor.value.toLowerCase();
               let i= document.getElementById("malls").value;
               console.log(`/${rfloor}/${i} ${waitingTime}`);
-              //if(valid(waitingTime))
+              if(valid(waitingTime))
               set(ref(db,`/${rfloor}/${i}`),waitingTime)
              console.log("Hello")
              if(waitingTime=="") showToast("Select Floor and Stall First","warning")

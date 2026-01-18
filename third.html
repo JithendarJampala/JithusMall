@@ -37,8 +37,6 @@
                 <div class="item">
                 <h1 class="waitingTime">Location : Third Floor</h1></div>
                 <div class="item">
-                <h1 class="liveStatus"> LiveStatus : 8 People</h1></div>
-                <div class="item">
                     <h1 class="contact"> Rating : 4/5 (12k Votes)</h1>
                 <h1 id="Third-stall-1"> Loading.......</h1></div>
             </div>
@@ -52,8 +50,6 @@
                 <div class="item">
                 <h1 class="waitingTime">Location : Third Floor</h1></div>
                 <div class="item">
-                <h1 class="liveStatus"> LiveStatus : 8 People</h1></div>
-                <div class="item">
                     <h1 class="contact"> Rating : 4/5 (12k Votes)</h1>
                 <h1 id="Third-stall-2"> Loading.......</h1></div>
             </div>
@@ -65,8 +61,6 @@
             <div class="statusBox">
                 <div class="item">
                 <h1 class="waitingTime">Location : Third Floor</h1></div>
-                <div class="item">
-                <h1 class="liveStatus"> LiveStatus : 8 People</h1></div>
                 <div class="item">
                     <h1 class="contact"> Rating : 4/5 (12k Votes)</h1>
                 <h1 id="Third-stall-3"> Loading.......</h1></div>
@@ -80,8 +74,6 @@
                 <div class="item">
                 <h1 class="waitingTime">Location : Third Floor</h1></div>
                 <div class="item">
-                <h1 class="liveStatus"> LiveStatus : 8 People</h1></div>
-                <div class="item">
                     <h1 class="contact"> Rating : 4/5 (12k Votes)</h1>
                 <h1 id="Third-stall-4"> Loading.......</h1></div>
             </div>
@@ -93,8 +85,6 @@
             <div class="statusBox">
                 <div class="item">
                 <h1 class="waitingTime">Location : Third Floor</h1></div>
-                <div class="item">
-                <h1 class="liveStatus"> LiveStatus : 8 People</h1></div>
                 <div class="item">
                     <h1 class="contact"> Rating : 4/5 (12k Votes)</h1>
                 <h1 id="Third-stall-5"> Loading.......</h1></div>
@@ -109,8 +99,6 @@
                 <div class="item">
                 <h1 class="waitingTime">Location : Third Floor</h1></div>
                 <div class="item">
-                <h1 class="liveStatus"> LiveStatus : 8 People</h1></div>
-                <div class="item">
                     <h1 class="contact"> Rating : 4/5 (12k Votes)</h1>
                 <h1 id="Third-stall-6"> Loading.......</h1></div>
             </div>
@@ -122,8 +110,6 @@
             <div class="statusBox">
                 <div class="item">
                 <h1 class="waitingTime">Location : Third Floor</h1></div>
-                <div class="item">
-                <h1 class="liveStatus"> LiveStatus : 8 People</h1></div>
                 <div class="item">
                     <h1 class="contact"> Rating : 4/5 (12k Votes)</h1>
                 <h1 id="Third-stall-7"> Loading.......</h1></div>
@@ -137,8 +123,6 @@
                 <div class="item">
                 <h1 class="waitingTime">Location : Third Floor</h1></div>
                 <div class="item">
-                <h1 class="liveStatus"> LiveStatus : 8 People</h1></div>
-                <div class="item">
                     <h1 class="contact"> Rating : 4/5 (12k Votes)</h1>
                 <h1 id="Third-stall-8"> Loading.......</h1></div>
             </div>
@@ -149,8 +133,6 @@
             <div class="statusBox">
                 <div class="item">
                 <h1 class="waitingTime">Location : Third Floor</h1></div>
-                <div class="item">
-                <h1 class="liveStatus"> LiveStatus : 8 People</h1></div>
                 <div class="item">
                     <h1 class="contact"> Rating : 4/5 (12k Votes)</h1>
                 <h1 id="Third-stall-9"> Loading.......</h1></div>
@@ -164,51 +146,7 @@
         document.getElementById("Third-stall-2").innerText="Changed"    
         })
     </script>
-    <!-- <script type="module">
-        import {initializeApp} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"
-        import {getDatabase, get, set, ref} from 
-        "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js"
-
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyBGBl7eIwUVYELtFwLtx8gI97wPWzWW6x0",
-  authDomain: "mall-database.firebaseapp.com",
-  databaseURL: "https://mall-database-default-rtdb.firebaseio.com",
-  projectId: "mall-database",
-  storageBucket: "mall-database.firebasestorage.app",
-  messagingSenderId: "445602997408",
-  appId: "1:445602997408:web:b7cad53fa09b07754195c5",
-  measurementId: "G-Y4668SDFK0"
-};
-
-        const app = initializeApp(firebaseConfig);
-        const db = getDatabase(app);
-
-        document.getElementById("sub-btn").addEventListener("click",()=>{create();
-            setValues();})
-        function update(){
-            let id ="Third-stall-";
-            let stall_num=document.getElementById('peopleCount').value;
-            console.log(stall_num);
-            id+=stall_num;
-            document.getElementById(id).innerText="19";
-            alert("People Count Updated")
-        }
-        function create(){
-            let matrix=[0,7,8,9,8,12,9,9,18,7];
     
-            set(ref(db,"ground/"),matrix);
-            alert("Matrix Created at FireBase")
-        }
-        function setValues(){
-            get(ref(db,"ground/")).then(snapshot=>{
-                let mat = snapshot.val();
-                for(let i=1;i<=9;i++){
-                    document.getElementById("Third-stall-"+i).innerText=mat[i];
-                }
-            });
-        }
-    </script> -->
     <script type="module" src="script.js"></script>
 </body>
 </html>

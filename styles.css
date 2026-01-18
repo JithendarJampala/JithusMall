@@ -157,10 +157,9 @@ nav a:hover{
 
 
 footer{
-    
     background-color: #0d243a;
     color: #C6A15c;
-    height: 60px;
+    height: auto;
     bottom: 0px;
     display: flex;
     align-content: center;
@@ -168,6 +167,8 @@ footer{
     align-items: center;
     text-align: center;
     gap: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
     
 }
 
